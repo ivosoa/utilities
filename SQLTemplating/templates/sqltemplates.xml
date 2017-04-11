@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqltemplates>
+    <sqltemplate name="TEMPLATE_1"><![CDATA[
+			SELECT * 
+                        FROM SOMETABLE
+                        WHERE COLUMN = ?
+		]]>
+    </sqltemplate>
+    <sqltemplate name="TEMPLATE_2">
+		<![CDATA[
+			SELECT * 
+                        FROM MAINTABLE
+                        WHERE COLUMN = ?
+		]]>
+        <sqltemplatetest><![CDATA[
+				SELECT * 
+                                FROM MAINTABLE AS TEST
+                                WHERE COLUMN = ?
+			]]>
+        </sqltemplatetest>
+    </sqltemplate>
+</sqltemplates>
